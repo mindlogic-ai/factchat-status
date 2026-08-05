@@ -12,6 +12,10 @@ sites:
     url: https://docs.mindlogic.ai
   - name: Gateway API
     url: https://factchat-cloud.mindlogic.ai/
+  - name: KBS (private cloud)
+    url: https://kbs.factchat.kr/api/health
+  - name: SNU (private cloud)
+    url: https://snu.factchat.kr/api/health
 status-website:
   baseUrl: /factchat-status
   logoUrl: https://www.factchat.bot/favicon.ico
