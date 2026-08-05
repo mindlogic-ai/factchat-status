@@ -10,7 +10,7 @@
 
   fetch(RAW + "/history/daily.json", { cache: "no-cache" })
     .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (j) { daily = j; })
+    .then(function (j) { daily = j; schedule(); })
     .catch(function () { daily = null; });
 
   function slugOf(article) {
@@ -107,20 +107,30 @@
     }
   }
 
-  var tries = 0;
-  var timer = setInterval(function () {
-    tries++;
+  // Sapper 는 라우팅 시 DOM 을 통째로 갈아끼운다. 한 번만 그리면 상세 페이지에 갔다
+  // 홈으로 돌아왔을 때 막대가 사라진다. 그래서 폴링 대신 DOM 변화를 계속 관찰한다.
+  var pending = null;
+  function render() {
     var articles = [].slice.call(document.querySelectorAll("section.live-status article"));
-    if (articles.length) {
-      articles.forEach(function (a) {
-        renderDot(a);
-        var s = slugOf(a);
-        if (s) renderBars(a, s);
-      });
-      renderAlert(articles);
-      // daily.json 이 늦게 오면 막대만 다시 그린다
-      if (daily || tries > 40) clearInterval(timer);
-    }
-    if (tries > 75) clearInterval(timer);
-  }, 400);
+    if (!articles.length) return;
+    articles.forEach(function (a) {
+      renderDot(a);
+      var s = slugOf(a);
+      if (s) renderBars(a, s);
+    });
+    renderAlert(articles);
+  }
+  function schedule() {
+    if (pending) clearTimeout(pending);
+    // 우리가 넣은 노드도 observer 를 다시 깨우므로 디바운스로 루프를 막는다.
+    // 렌더 함수들은 모두 멱등이라 중복 호출은 무해하다.
+    pending = setTimeout(render, 120);
+  }
+
+  if (document.readyState === "loading")
+    document.addEventListener("DOMContentLoaded", schedule);
+  else schedule();
+
+  new MutationObserver(schedule).observe(document.body, { childList: true, subtree: true });
+  window.addEventListener("popstate", schedule);
 })();
