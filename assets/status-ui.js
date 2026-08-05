@@ -27,10 +27,18 @@
     return "down";
   }
 
+  function emptyWindow() {
+    // daily.json 이 아직 이 모니터를 모를 때(모니터 신규 추가·이름 변경으로 slug 가 바뀐 직후)
+    // 그냥 return 하면 그 행만 막대가 통째로 사라진다. 회색 30칸으로 자리를 잡아둔다.
+    var out = [];
+    for (var i = 0; i < 30; i++) out.push({ date: "", uptime: null, checks: 0 });
+    return out;
+  }
+
   function renderBars(article, slug) {
-    if (!daily || !daily.sites || !daily.sites[slug]) return;
+    if (!daily) return; // fetch 미완료 — 도착하면 schedule() 이 다시 부른다
     if (article.querySelector(".fc-bars")) return;
-    var days = daily.sites[slug];
+    var days = (daily.sites && daily.sites[slug]) || emptyWindow();
     var withData = days.filter(function (d) { return d.checks > 0; });
     var avg = withData.length
       ? withData.reduce(function (s, d) { return s + d.uptime; }, 0) / withData.length
@@ -43,7 +51,7 @@
       b.className = "fc-bar " + barClass(d);
       b.title = d.checks
         ? d.date + " · 가동률 " + d.uptime + "% (" + d.checks + "회 점검)"
-        : d.date + " · 데이터 없음";
+        : (d.date ? d.date + " · 데이터 없음" : "데이터 없음");
       bars.appendChild(b);
     });
 
@@ -61,7 +69,9 @@
     if (withData.length < days.length) {
       var note = document.createElement("div");
       note.className = "fc-legend-note";
-      note.textContent = "가동 이력 " + withData.length + "일 누적 — 회색은 수집 전 기간입니다";
+      note.textContent = withData.length
+        ? "가동 이력 " + withData.length + "일 누적 — 회색은 수집 전 기간입니다"
+        : "가동 이력 집계 대기 중 — 다음 정시에 채워집니다";
       article.appendChild(note);
     }
   }

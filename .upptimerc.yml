@@ -12,10 +12,8 @@ sites:
     url: https://docs.mindlogic.ai
   - name: Chat API · Gateway
     url: https://factchat-cloud.mindlogic.ai/health/
-  - name: KBS (private cloud)
+  - name: NCP (전용 클라우드)
     url: https://kbs.factchat.kr/api/health
-  - name: SNU (private cloud)
-    url: https://snu.factchat.kr/api/health
 status-website:
   baseUrl: /factchat-status
   logoUrl: https://www.factchat.bot/favicon.ico
@@ -192,10 +190,18 @@ status-website:
         return "down";
       }
 
+      function emptyWindow() {
+        // daily.json 이 아직 이 모니터를 모를 때(모니터 신규 추가·이름 변경으로 slug 가 바뀐 직후)
+        // 그냥 return 하면 그 행만 막대가 통째로 사라진다. 회색 30칸으로 자리를 잡아둔다.
+        var out = [];
+        for (var i = 0; i < 30; i++) out.push({ date: "", uptime: null, checks: 0 });
+        return out;
+      }
+
       function renderBars(article, slug) {
-        if (!daily || !daily.sites || !daily.sites[slug]) return;
+        if (!daily) return; // fetch 미완료 — 도착하면 schedule() 이 다시 부른다
         if (article.querySelector(".fc-bars")) return;
-        var days = daily.sites[slug];
+        var days = (daily.sites && daily.sites[slug]) || emptyWindow();
         var withData = days.filter(function (d) { return d.checks > 0; });
         var avg = withData.length
           ? withData.reduce(function (s, d) { return s + d.uptime; }, 0) / withData.length
@@ -208,7 +214,7 @@ status-website:
           b.className = "fc-bar " + barClass(d);
           b.title = d.checks
             ? d.date + " · 가동률 " + d.uptime + "% (" + d.checks + "회 점검)"
-            : d.date + " · 데이터 없음";
+            : (d.date ? d.date + " · 데이터 없음" : "데이터 없음");
           bars.appendChild(b);
         });
 
@@ -226,7 +232,9 @@ status-website:
         if (withData.length < days.length) {
           var note = document.createElement("div");
           note.className = "fc-legend-note";
-          note.textContent = "가동 이력 " + withData.length + "일 누적 — 회색은 수집 전 기간입니다";
+          note.textContent = withData.length
+            ? "가동 이력 " + withData.length + "일 누적 — 회색은 수집 전 기간입니다"
+            : "가동 이력 집계 대기 중 — 다음 정시에 채워집니다";
           article.appendChild(note);
         }
       }
@@ -343,3 +351,6 @@ i18n:
 #   File Upload&OCR https://<docparse-alb>/health · KBS/SNU (NCP) https://<host>/api/health
 # 제외: SGI(sgi-factchat) — IP 화이트리스트라 GitHub 러너에서 접근 불가.
 # Gateway API 는 잠정 — 루트 200 은 의미가 약하다. 인증 없는 /health 로 교체 필요.
+# NCP 모니터는 kbs.factchat.kr 로 찌른다. factchat.kr 정점/www 는 Vercel(216.150.x)이고
+# NCP LB(sm-waf-lb-*.kr-gov.lb.naverncp.com)로 가는 건 테넌트 서브도메인뿐이다.
+# KBS·SNU 는 같은 클러스터·같은 LB 라 한 행으로 대표한다.
