@@ -1,0 +1,26 @@
+name: Daily Uptime CI
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [daily_uptime]
+jobs:
+  daily-uptime:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 일자별 집계에 커밋 이력 전체가 필요하다
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install js-yaml@4 --no-save
+      - run: node scripts/daily-uptime.mjs
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add history/daily.json
+          git diff --staged --quiet || git commit -m ":bar_chart: Update daily uptime [skip ci]"
+          git push
