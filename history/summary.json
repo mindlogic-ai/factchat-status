@@ -70,5 +70,41 @@
     "timeMonth": 417,
     "timeYear": 417,
     "dailyMinutesDown": {}
+  },
+  {
+    "name": "KBS (private cloud)",
+    "url": "https://kbs.factchat.kr/api/health",
+    "icon": "https://icons.duckduckgo.com/ip3/kbs.factchat.kr.ico",
+    "slug": "kbs-private-cloud",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 1300,
+    "timeDay": 1300,
+    "timeWeek": 1300,
+    "timeMonth": 1300,
+    "timeYear": 1300,
+    "dailyMinutesDown": {}
+  },
+  {
+    "name": "SNU (private cloud)",
+    "url": "https://snu.factchat.kr/api/health",
+    "icon": "https://icons.duckduckgo.com/ip3/snu.factchat.kr.ico",
+    "slug": "snu-private-cloud",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 1313,
+    "timeDay": 1313,
+    "timeWeek": 1313,
+    "timeMonth": 1313,
+    "timeYear": 1313,
+    "dailyMinutesDown": {}
   }
 ]
