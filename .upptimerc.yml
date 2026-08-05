@@ -1,6 +1,6 @@
 # FactChat public status page — https://mindlogic-ai.github.io/factchat-status/
 # Upptime config. Docs: https://upptime.js.org/docs/configuration
-# 커스텀 도메인(status.factchat.bot)은 보류 — *.factchat.bot 와일드카드가 Vercel 로 간다.
+# 커스텀 도메인(status.factchat.bot) 보류 — *.factchat.bot 와일드카드가 Vercel 로 간다.
 owner: mindlogic-ai
 repo: factchat-status
 sites:
@@ -13,14 +13,12 @@ sites:
 - name: Gateway API
   url: https://factchat-cloud.mindlogic.ai/
 status-website:
-  # 프로젝트 페이지(/factchat-status) 하위로 서비스하므로 sapper basepath 를 맞춰야 한다.
-  # 없으면 자산이 /client/... 루트 상대경로로 나가 404 → 스피너가 계속 돈다.
   baseUrl: /factchat-status
   logoUrl: https://www.factchat.bot/favicon.ico
   name: FactChat Status
   introTitle: '**FactChat** 서비스 상태'
   introMessage: 팩트챗 서비스의 실시간 가동 상태와 과거 장애 이력입니다.
-  customHeadHtml: '<style> :root{--body-background-color:#fff!important;--body-text-color:#1f2328!important; --card-background-color:#fff!important;--nav-background-color:#fff!important; --nav-border-bottom-color:#d1d9e0!important;--card-border-color:#d1d9e0!important; --nav-current-border-bottom-color:#fd8c73!important;--up-border-left-color:#1f883d!important; --degraded-border-left-color:#9a6700!important;--down-border-left-color:#cf222e!important; --tag-up-background-color:#1f883d!important;--tag-degraded-background-color:#9a6700!important; --tag-down-background-color:#cf222e!important;--graph-opacity:.45!important} body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif!important; background:#fff!important;color:#1f2328!important;line-height:1.5!important} .container{max-width:880px!important;padding:0 16px!important} nav{border-bottom:1px solid #d1d9e0!important;background:#fff!important} h1{font-size:24px!important;font-weight:600!important;letter-spacing:-.2px!important} h2{font-size:16px!important;font-weight:600!important;color:#59636e!important} h3{font-size:14px!important;font-weight:600!important;color:#59636e!important;opacity:1!important} h4{font-size:15px!important;font-weight:600!important;margin:0!important} section.live-status{border:1px solid #d1d9e0!important;border-radius:6px!important;overflow:hidden!important} section.live-status article{border:0!important;border-radius:0!important;background:#fff!important; padding:16px 20px!important;margin:0!important} section.live-status article+article{border-top:1px solid #d1d9e0!important;margin-top:0!important} section.live-status article>div{font-size:13px!important;color:#59636e!important} section.live-status article .data{color:#1f2328!important;font-weight:600!important} .tag{border-radius:2em!important;font-size:12px!important;font-weight:500!important; padding:2px 10px!important;letter-spacing:.2px!important} #fc-banner{border-radius:6px!important;padding:14px 20px!important;margin:0 0 24px!important; color:#fff!important;font-weight:600!important;font-size:16px!important} #fc-banner.ok{background:#1f883d!important} #fc-banner.degraded{background:#9a6700!important} #fc-banner.down{background:#cf222e!important} a{text-decoration:none!important}a:hover{text-decoration:underline!important} </style><script>(function(){var t=setInterval(function(){var a=document.querySelectorAll(''section.live-status article'');if(!a.length)return;var d=0,g=0;a.forEach(function(x){if(x.classList.contains(''down''))d++;else if(x.classList.contains(''degraded''))g++;});var e=document.getElementById(''fc-banner'');if(!e){e=document.createElement(''div'');e.id=''fc-banner'';var s=document.querySelector(''section.live-status'');s.parentNode.insertBefore(e,s);}if(d){e.className=''down'';e.textContent=''\u26A0 ''+d+''\uAC1C \uC11C\uBE44\uC2A4 \uC7A5\uC560'';}else if(g){e.className=''degraded'';e.textContent=''\u26A0 \uC77C\uBD80 \uC11C\uBE44\uC2A4 \uC131\uB2A5 \uC800\uD558'';}else{e.className=''ok'';e.textContent=''\u2713 \uBAA8\uB4E0 \uC11C\uBE44\uC2A4 \uC815\uC0C1'';}},400);setTimeout(function(){clearInterval(t);},30000);})();</script>'
+  customHeadHtml: '<style> :root{--body-background-color:#fff!important;--body-text-color:#1f2328!important; --card-background-color:#fff!important;--nav-background-color:#fff!important; --nav-border-bottom-color:#d1d9e0!important;--card-border-color:#d1d9e0!important; --nav-current-border-bottom-color:#fd8c73!important;--up-border-left-color:#1f883d!important; --degraded-border-left-color:#9a6700!important;--down-border-left-color:#cf222e!important; --tag-up-background-color:#1f883d!important;--tag-degraded-background-color:#9a6700!important; --tag-down-background-color:#cf222e!important;--graph-opacity:.45!important} body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif!important; background:#fff!important;color:#1f2328!important;line-height:1.5!important} .container{max-width:880px!important;padding:0 16px!important} nav{border-bottom:1px solid #d1d9e0!important;background:#fff!important} h1{font-size:24px!important;font-weight:600!important;letter-spacing:-.2px!important} h2{font-size:16px!important;font-weight:600!important;color:#59636e!important} h3{font-size:14px!important;font-weight:600!important;color:#59636e!important;opacity:1!important} h4{font-size:15px!important;font-weight:600!important;margin:0!important} /* 전체 상태 배너 — Upptime 내장 article(.link 없음)을 githubstatus 처럼 채운다 */ article.up:not(.link){background:#1f883d!important;color:#fff!important;border:0!important; border-radius:6px!important;padding:16px 20px!important;font-weight:600!important; font-size:16px!important;margin-bottom:24px!important} article.down:not(.link){background:#cf222e!important;color:#fff!important;border:0!important; border-radius:6px!important} /* 컴포넌트 목록 — 카드 대신 구분선 (githubstatus 동일) */ section.live-status{border:1px solid #d1d9e0!important;border-radius:6px!important;overflow:hidden!important} section.live-status article{border:0!important;border-radius:0!important;background:#fff!important; padding:16px 20px!important;margin:0!important} section.live-status article+article{border-top:1px solid #d1d9e0!important;margin-top:0!important} section.live-status article>div{font-size:13px!important;color:#59636e!important} section.live-status article .data{color:#1f2328!important;font-weight:600!important} section.live-status .icon{width:16px!important;height:16px!important;vertical-align:-2px!important} .tag{border-radius:2em!important;font-size:12px!important;font-weight:500!important; padding:2px 10px!important;letter-spacing:.2px!important} a{text-decoration:none!important}a:hover{text-decoration:underline!important} </style>'
   navbar:
   - title: Status
     href: /
@@ -39,12 +37,27 @@ commitMessages:
   readmeContent: ':pencil: Update summary in README [skip ci] [upptime]'
   summaryContent: ':card_file_box: Update status summary [skip ci] [upptime]'
   statusChange: $EMOJI $SITE_NAME is $STATUS ($RESPONSE_CODE in $RESPONSE_TIME ms) [skip ci] [upptime]
+i18n:
+  allSystemsOperational: ✅  모든 서비스가 정상 동작 중입니다
+  activeIncidents: 진행 중인 장애
+  liveStatus: 서비스 상태
+  overallUptime: '가동률: $UPTIME'
+  overallUptimeTitle: 가동률
+  averageResponseTime: '평균 응답시간: $TIMEms'
+  averageResponseTimeTitle: 평균 응답시간
+  pastIncidents: 지난 장애 이력
+  scheduledMaintenance: 예정된 점검
+  pastScheduledMaintenance: 지난 점검 이력
+  up: 정상
+  down: 장애
+  degraded: 성능 저하
+  loading: 불러오는 중
+  locale: ko-KR
+  sevelDayResponseTime: 7일 응답시간
+  responseTimeMs: 응답시간 (ms)
 
-# --- 배포 대기 모니터 (FTC-1957 BE / FTC-1958 SSO). 엔드포인트가 뜨면 sites 에 추가할 것 ---
-#   - name: Chat API          url: https://<eb-alb-host>/health
-#   - name: Login & SSO       url: https://<sso-host>/health
-#   - name: File Upload & OCR url: https://<docparse-alb-host>/health
-#   - name: KBS (private cloud)  url: https://<kbs-ncp-host>/api/health
-#   - name: SNU (private cloud)  url: https://<snu-ncp-host>/api/health
+# --- 배포 대기 모니터 (FTC-1957 BE / FTC-1958 SSO). 엔드포인트가 뜨면 sites 에 추가 ---
+#   Chat API https://<eb-alb>/health · Login&SSO https://<sso>/health
+#   File Upload&OCR https://<docparse-alb>/health · KBS/SNU (NCP) https://<host>/api/health
 # 제외: SGI(sgi-factchat) — IP 화이트리스트라 GitHub 러너에서 접근 불가.
-# Gateway API 는 잠정 — 루트가 200 을 주지만 의미가 약하다. 인증 없는 /health 로 교체 필요.
+# Gateway API 는 잠정 — 루트 200 은 의미가 약하다. 인증 없는 /health 로 교체 필요.
