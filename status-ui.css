@@ -1,0 +1,135 @@
+/* FactChat Status — logician-ui 토큰 기반 테마.
+   customHeadHtml 은 Upptime 의 테마·global.css 보다 먼저 주입되므로 !important 가 필요하다.
+   토큰 출처: mindlogic-ai/logician-ui src/theme/colors.ts */
+:root {
+  --fc-primary: #1751d0;
+  --fc-success: #1aa612;
+  --fc-warning: #d0a117;
+  --fc-danger: #c1232c;
+  --fc-canvas: #fdfdff;
+  --fc-subtle-bg: #f7f9fc;
+  --fc-border: #cdd3e0;
+  --fc-border-subtle: #e2e6f0;
+  --fc-fg: #1e2433;
+  --fc-fg-muted: #505a74;
+  --fc-fg-subtle: #737d96;
+  --fc-radius: 12px;
+
+  --body-background-color: var(--fc-canvas) !important;
+  --body-text-color: var(--fc-fg) !important;
+  --card-background-color: #fff !important;
+  --nav-background-color: #fff !important;
+  --nav-border-bottom-color: var(--fc-border-subtle) !important;
+  --card-border-color: var(--fc-border) !important;
+  --nav-current-border-bottom-color: var(--fc-primary) !important;
+  --up-border-left-color: var(--fc-success) !important;
+  --degraded-border-left-color: var(--fc-warning) !important;
+  --down-border-left-color: var(--fc-danger) !important;
+  --tag-up-background-color: var(--fc-success) !important;
+  --tag-degraded-background-color: var(--fc-warning) !important;
+  --tag-down-background-color: var(--fc-danger) !important;
+  --graph-opacity: 0 !important; /* 카드 배경 그래프는 막대와 겹쳐 지저분하다 */
+}
+
+body {
+  font-family: "Pretendard Variable", Pretendard, Inter, "Noto Sans KR", -apple-system,
+    BlinkMacSystemFont, sans-serif !important;
+  background: var(--fc-canvas) !important;
+  color: var(--fc-fg) !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+}
+.container { max-width: 880px !important; padding: 0 20px !important; }
+nav { border-bottom: 1px solid var(--fc-border-subtle) !important; background: #fff !important; }
+
+h1 { font-size: 32px !important; font-weight: 700 !important; letter-spacing: -0.02em !important; }
+h2 { font-size: 20px !important; font-weight: 600 !important; color: var(--fc-fg) !important;
+     letter-spacing: -0.01em !important; }
+h3 { font-size: 14px !important; font-weight: 600 !important; color: var(--fc-fg-subtle) !important;
+     opacity: 1 !important; }
+h4 { font-size: 15px !important; font-weight: 600 !important; margin: 0 !important; }
+p.lead { color: var(--fc-fg-muted) !important; }
+a { text-decoration: none !important; color: inherit !important; }
+a:hover { text-decoration: underline !important; }
+
+/* ── 전체 상태 배너 ─────────────────────────────────────────── */
+article.up:not(.link),
+#fc-alert {
+  border: 0 !important;
+  border-radius: var(--fc-radius) !important;
+  padding: 18px 20px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+  margin: 0 0 28px 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+article.up:not(.link) { background: var(--fc-success) !important; }
+#fc-alert.degraded { background: var(--fc-warning) !important; }
+#fc-alert.down { background: var(--fc-danger) !important; }
+#fc-alert .fc-alert-sub {
+  font-weight: 500 !important; font-size: 14px !important; opacity: 0.92 !important;
+  margin-left: auto !important;
+}
+
+/* 진행 중인 장애 카드 — githubstatus 의 업데이트 타임라인 형태 */
+article.down.down-active {
+  background: #fff !important;
+  border: 1px solid var(--fc-warning) !important;
+  border-left: 4px solid var(--fc-warning) !important;
+  border-radius: var(--fc-radius) !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+article.down.down-active > .f { padding: 16px 20px !important; }
+article.down.down-active h4 { color: var(--fc-fg) !important; }
+
+/* ── 컴포넌트 목록 ──────────────────────────────────────────── */
+section.live-status {
+  border: 1px solid var(--fc-border-subtle) !important;
+  border-radius: var(--fc-radius) !important;
+  overflow: hidden !important;
+  background: #fff !important;
+}
+section.live-status article {
+  border: 0 !important; border-radius: 0 !important; background: #fff !important;
+  padding: 20px !important; margin: 0 !important;
+}
+section.live-status article + article {
+  border-top: 1px solid var(--fc-border-subtle) !important; margin-top: 0 !important;
+}
+section.live-status article h4 { display: flex !important; align-items: center !important; gap: 8px !important; }
+section.live-status .icon { width: 16px !important; height: 16px !important; }
+section.live-status article > div { font-size: 13px !important; color: var(--fc-fg-subtle) !important; }
+section.live-status article .data { color: var(--fc-fg) !important; font-weight: 600 !important; }
+
+/* 상태 점 — 이름 오른쪽 끝 */
+.fc-dot {
+  margin-left: auto !important; width: 20px; height: 20px; border-radius: 999px;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 12px; flex: none;
+}
+.fc-dot.up { background: var(--fc-success); }
+.fc-dot.degraded { background: var(--fc-warning); }
+.fc-dot.down { background: var(--fc-danger); }
+
+/* ── 30일 가동률 막대 ───────────────────────────────────────── */
+.fc-bars { display: flex; gap: 2px; margin: 12px 0 8px; height: 34px; }
+.fc-bar { flex: 1 1 0; border-radius: 2px; background: var(--fc-border-subtle); transition: opacity .15s; }
+.fc-bar.up { background: var(--fc-success); opacity: .45; }
+.fc-bar.partial { background: var(--fc-warning); }
+.fc-bar.down { background: var(--fc-danger); }
+.fc-bar:hover { opacity: 1; }
+.fc-scale {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 12px; color: var(--fc-fg-subtle); font-weight: 500;
+}
+.fc-scale .fc-rule { flex: 1 1 auto; height: 1px; background: var(--fc-border-subtle); }
+.fc-legend-note { font-size: 12px; color: var(--fc-fg-subtle); margin-top: 4px; }
+
+@media (max-width: 600px) {
+  .fc-bars { height: 28px; gap: 1px; }
+  h1 { font-size: 26px !important; }
+}
