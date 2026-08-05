@@ -25,7 +25,7 @@ for (const slug of slugs) {
   let log = "";
   try {
     log = execSync(
-      `git log --format='@%cI' -p --since='${DAYS + 1} days ago' -- history/${slug}.yml`,
+      `git log --format='#COMMIT#%cI' -p --since='${DAYS + 1} days ago' -- history/${slug}.yml`,
       { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 }
     );
   } catch {
@@ -34,12 +34,15 @@ for (const slug of slugs) {
   const perDay = {};
   let when = null;
   for (const line of log.split("\n")) {
-    if (line.startsWith("@")) {
-      when = dayKey(line.slice(1));
+    // 마커를 '@' 로 두면 diff 의 hunk 헤더(@@ -1,7 +1,7 @@)까지 커밋 구분자로 잡혀
+    // 모든 상태가 엉뚱한 날짜 키에 들어간다. 충돌하지 않는 마커를 쓴다.
+    if (line.startsWith("#COMMIT#")) {
+      when = dayKey(line.slice(8));
       continue;
     }
-    // diff 에서 추가된 status 줄만 본다 (삭제된 줄은 이전 상태라 중복 집계된다)
-    const m = /^\+status:\s*(\w+)/.exec(line);
+    // 상태가 안 바뀐 커밋에서는 status 가 context 줄(' status: up')로 나온다.
+    // '+' 만 보면 상태 변경 시점만 잡혀 거의 전부 누락된다. 삭제줄('-')만 제외한다.
+    const m = /^[ +]status:\s*(\w+)/.exec(line);
     if (!m || !when) continue;
     perDay[when] = perDay[when] || { up: 0, total: 0 };
     perDay[when].total += 1;
