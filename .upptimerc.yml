@@ -38,9 +38,9 @@ commitMessages:
   summaryContent: ':card_file_box: Update status summary [skip ci] [upptime]'
   statusChange: $EMOJI $SITE_NAME is $STATUS ($RESPONSE_CODE in $RESPONSE_TIME ms) [skip ci] [upptime]
 i18n:
-  allSystemsOperational: ✅  모든 서비스가 정상 동작 중입니다
+  allSystemsOperational: 모든 서비스가 정상 동작 중입니다
   activeIncidents: 진행 중인 장애
-  liveStatus: 서비스 상태
+  liveStatus: 서비스별 상태
   overallUptime: '가동률: $UPTIME'
   overallUptimeTitle: 가동률
   averageResponseTime: '평균 응답시간: $TIMEms'
@@ -55,6 +55,7 @@ i18n:
   locale: ko-KR
   sevelDayResponseTime: 7일 응답시간
   responseTimeMs: 응답시간 (ms)
+  footer: 이 페이지는 [오픈소스]($REPO)이며 [Upptime](https://upptime.js.org)으로 동작합니다
 
 # --- 배포 대기 모니터 (FTC-1957 BE / FTC-1958 SSO). 엔드포인트가 뜨면 sites 에 추가 ---
 #   Chat API https://<eb-alb>/health · Login&SSO https://<sso>/health
