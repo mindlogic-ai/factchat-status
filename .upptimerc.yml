@@ -1,0 +1,64 @@
+# FactChat public status page — https://status.factchat.bot
+# Upptime config. Docs: https://upptime.js.org/docs/configuration
+owner: mindlogic-ai
+repo: factchat-status
+
+sites:
+  # --- Live (verified 2026-08-05) ---
+  - name: Web App
+    url: https://mindlogic.factchat.bot/api/health
+    # NOTE: the app lives on tenant subdomains. factchat.bot apex is the landing page
+    # and has no /api/health. mindlogic.* is our own tenant — safe to probe.
+
+  - name: Landing Page
+    url: https://factchat.bot
+
+  - name: Docs
+    url: https://docs.mindlogic.ai
+
+  - name: Gateway API
+    url: https://factchat-cloud.mindlogic.ai/
+    # PROVISIONAL: root returns 200 but proves little. /v1/gateway is 404 without an
+    # API key. Repoint at a real unauthenticated /health once FTC-1955 lands.
+
+  # --- Pending health endpoints (FTC-1957 / FTC-1958). Uncomment when deployed. ---
+  # - name: Chat API
+  #   url: https://<eb-alb-host>/health
+  # - name: Login & SSO
+  #   url: https://<sso-host>/health
+  # - name: File Upload & OCR
+  #   url: https://<docparse-alb-host>/health
+  # - name: KBS (private cloud)
+  #   url: https://<kbs-ncp-host>/api/health
+  # - name: SNU (private cloud)
+  #   url: https://<snu-ncp-host>/api/health
+  #
+  # EXCLUDED: SGI (sgi-factchat) — IP-allowlisted, unreachable from GitHub runners.
+
+status-website:
+  cname: status.factchat.bot
+  logoUrl: https://www.factchat.bot/favicon.ico
+  name: FactChat Status
+  introTitle: "**FactChat** 서비스 상태"
+  introMessage: 팩트챗 서비스의 실시간 가동 상태와 과거 장애 이력입니다.
+  navbar:
+    - title: Status
+      href: /
+    - title: GitHub
+      href: https://github.com/mindlogic-ai/factchat-status
+
+# Probe cadence — GitHub Actions schedules drift; 5min is the practical floor.
+workflowSchedule:
+  uptime: "*/5 * * * *"
+  responseTime: "0 23 * * *"
+  graphs: "0 0 * * *"
+  staticSite: "0 1 * * *"
+  summary: "0 0 * * *"
+
+assignees:
+  - spark33
+
+commitMessages:
+  readmeContent: ":pencil: Update summary in README [skip ci] [upptime]"
+  summaryContent: ":card_file_box: Update status summary [skip ci] [upptime]"
+  statusChange: "$EMOJI $SITE_NAME is $STATUS ($RESPONSE_CODE in $RESPONSE_TIME ms) [skip ci] [upptime]"
