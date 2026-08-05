@@ -10,8 +10,8 @@ sites:
     url: https://factchat.bot
   - name: Docs
     url: https://docs.mindlogic.ai
-  - name: Gateway API
-    url: https://factchat-cloud.mindlogic.ai/
+  - name: Chat API · Gateway
+    url: https://factchat-cloud.mindlogic.ai/health/
   - name: KBS (private cloud)
     url: https://kbs.factchat.kr/api/health
   - name: SNU (private cloud)
@@ -338,7 +338,8 @@ i18n:
   footer: 이 페이지는 [오픈소스]($REPO)이며 [Upptime](https://upptime.js.org)으로 동작합니다
 
 # --- 배포 대기 모니터 (FTC-1957 BE / FTC-1958 SSO). 엔드포인트가 뜨면 sites 에 추가 ---
-#   Chat API https://<eb-alb>/health · Login&SSO https://<sso>/health
+#   (Chat API·Gateway 는 기존 /health/ 사용으로 해결됨)
+#   Login&SSO https://<sso>/health
 #   File Upload&OCR https://<docparse-alb>/health · KBS/SNU (NCP) https://<host>/api/health
 # 제외: SGI(sgi-factchat) — IP 화이트리스트라 GitHub 러너에서 접근 불가.
 # Gateway API 는 잠정 — 루트 200 은 의미가 약하다. 인증 없는 /health 로 교체 필요.
