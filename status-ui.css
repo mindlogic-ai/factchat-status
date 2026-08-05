@@ -115,6 +115,9 @@ section.live-status article .data { color: var(--fc-fg) !important; font-weight:
 .fc-dot.degraded { background: var(--fc-warning); }
 .fc-dot.down { background: var(--fc-danger); }
 
+/* 기간 선택 탭(24h/7d/30d/1y/all) 숨김 — 막대는 항상 30일 기준이라 혼동만 준다 */
+.f.changed form { display: none !important; }
+
 /* ── 30일 가동률 막대 ───────────────────────────────────────── */
 .fc-bars { display: flex; gap: 2px; margin: 12px 0 8px; height: 34px; }
 .fc-bar { flex: 1 1 0; border-radius: 2px; background: var(--fc-border-subtle); transition: opacity .15s; }
