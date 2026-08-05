@@ -13,6 +13,9 @@ sites:
 - name: Gateway API
   url: https://factchat-cloud.mindlogic.ai/
 status-website:
+  # 프로젝트 페이지(/factchat-status) 하위로 서비스하므로 sapper basepath 를 맞춰야 한다.
+  # 없으면 자산이 /client/... 루트 상대경로로 나가 404 → 스피너가 계속 돈다.
+  baseUrl: /factchat-status
   logoUrl: https://www.factchat.bot/favicon.ico
   name: FactChat Status
   introTitle: '**FactChat** 서비스 상태'
