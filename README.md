@@ -1,6 +1,6 @@
 # FactChat Status
 
-Public status page for FactChat — https://status.factchat.bot
+Public status page for FactChat — https://mindlogic-ai.github.io/factchat-status/
 
 Built on [Upptime](https://upptime.js.org): GitHub Actions probes every 5 minutes, history
 committed to this repo, static site published to GitHub Pages. It runs outside our own
@@ -25,5 +25,7 @@ Severity, who may declare, and posting SLA are defined in FTC-1960.
   not as a measure of what Korean users experience.
 - Anything IP-allowlisted is unreachable from those runners. SGI (`sgi-factchat`) is excluded
   for this reason.
+- Custom domain (`status.factchat.bot`) is on hold. `*.factchat.bot` is a wildcard CNAME to
+  Vercel, so that name needs an explicit Cloudflare record (DNS-only) to reach GitHub Pages.
 - The app lives on tenant subdomains; `factchat.bot` apex is the landing page and is monitored
   separately.

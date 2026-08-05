@@ -36,7 +36,7 @@ sites:
   # EXCLUDED: SGI (sgi-factchat) — IP-allowlisted, unreachable from GitHub runners.
 
 status-website:
-  cname: status.factchat.bot
+  # cname: status.factchat.bot   # 커스텀 도메인 보류 — *.factchat.bot 와일드카드가 Vercel 로 가 있어 status 도 삼켜진다.
   logoUrl: https://www.factchat.bot/favicon.ico
   name: FactChat Status
   introTitle: "**FactChat** 서비스 상태"
