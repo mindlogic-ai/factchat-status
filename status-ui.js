@@ -127,10 +127,13 @@
     pending = setTimeout(render, 120);
   }
 
-  if (document.readyState === "loading")
-    document.addEventListener("DOMContentLoaded", schedule);
-  else schedule();
-
-  new MutationObserver(schedule).observe(document.body, { childList: true, subtree: true });
-  window.addEventListener("popstate", schedule);
+  // 이 스크립트는 <head> 에서 실행된다. 그 시점엔 document.body 가 없어서
+  // 바로 observe 하면 예외로 죽고(첫 로드만 우연히 그려짐) 라우팅 후 재렌더가 안 된다.
+  function start() {
+    schedule();
+    new MutationObserver(schedule).observe(document.body, { childList: true, subtree: true });
+    window.addEventListener("popstate", schedule);
+  }
+  if (document.body) start();
+  else document.addEventListener("DOMContentLoaded", start);
 })();
