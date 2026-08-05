@@ -62,6 +62,7 @@ status-website:
     }
     .container { max-width: 880px !important; padding: 0 20px !important; }
     nav { border-bottom: 1px solid var(--fc-border-subtle) !important; background: #fff !important; }
+    nav ul { display: none !important; } /* Status/GitHub 탭 제거 — 로고와 제목만 남긴다 */
 
     h1 { font-size: 32px !important; font-weight: 700 !important; letter-spacing: -0.02em !important; }
     h2 { font-size: 20px !important; font-weight: 600 !important; color: var(--fc-fg) !important;
@@ -298,11 +299,7 @@ status-website:
       else document.addEventListener("DOMContentLoaded", start);
     })();
     </script>
-  navbar:
-    - title: Status
-      href: /
-    - title: GitHub
-      href: https://github.com/mindlogic-ai/factchat-status
+  navbar: []
   theme: light
 workflowSchedule:
   uptime: '*/5 * * * *'
