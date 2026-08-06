@@ -1,6 +1,6 @@
 [
   {
-    "name": "Web App",
+    "name": "FactChat Service (app.factchat.bot)",
     "url": "https://mindlogic.factchat.bot/api/health",
     "icon": "https://icons.duckduckgo.com/ip3/mindlogic.factchat.bot.ico",
     "slug": "web-app",
@@ -18,7 +18,7 @@
     "dailyMinutesDown": {}
   },
   {
-    "name": "Landing Page",
+    "name": "FactChat Homepage (www.factchat.bot)",
     "url": "https://factchat.bot",
     "icon": "https://icons.duckduckgo.com/ip3/factchat.bot.ico",
     "slug": "landing-page",
@@ -54,7 +54,7 @@
     "dailyMinutesDown": {}
   },
   {
-    "name": "Chat API · Gateway",
+    "name": "API & API Gateway",
     "url": "https://factchat-cloud.mindlogic.ai/health/",
     "icon": "https://icons.duckduckgo.com/ip3/factchat-cloud.mindlogic.ai.ico",
     "slug": "chat-api-gateway",
