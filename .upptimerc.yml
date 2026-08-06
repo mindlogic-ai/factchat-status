@@ -21,7 +21,7 @@ status-website:
   introTitle: '**FactChat** 서비스 상태'
   introMessage: 팩트챗 서비스의 실시간 가동 상태와 과거 장애 이력입니다.
   customHeadHtml: |-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"><style>/* FactChat Status — logician-ui 토큰 기반 테마.
+    <meta name="description" content="팩트챗(FactChat) 서비스의 실시간 가동 상태와 과거 장애 이력. 웹앱·Chat API·게이트웨이·전용 클라우드(NCP)의 30일 가동률을 확인할 수 있습니다."><link rel="canonical" href="https://mindlogic-ai.github.io/factchat-status/"><meta property="og:type" content="website"><meta property="og:site_name" content="FactChat Status"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="FactChat 서비스 상태"><meta property="og:description" content="팩트챗(FactChat) 서비스의 실시간 가동 상태와 과거 장애 이력. 웹앱·Chat API·게이트웨이·전용 클라우드(NCP)의 30일 가동률을 확인할 수 있습니다."><meta property="og:url" content="https://mindlogic-ai.github.io/factchat-status/"><meta property="og:image" content="https://mindlogic-ai.github.io/factchat-status/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="FactChat 서비스 상태"><meta name="twitter:description" content="팩트챗(FactChat) 서비스의 실시간 가동 상태와 과거 장애 이력. 웹앱·Chat API·게이트웨이·전용 클라우드(NCP)의 30일 가동률을 확인할 수 있습니다."><meta name="twitter:image" content="https://mindlogic-ai.github.io/factchat-status/og.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"><style>/* FactChat Status — logician-ui 토큰 기반 테마.
        customHeadHtml 은 Upptime 의 테마·global.css 보다 먼저 주입되므로 !important 가 필요하다.
        토큰 출처: mindlogic-ai/logician-ui src/theme/colors.ts */
     :root {
@@ -310,7 +310,7 @@ status-website:
       if (document.body) start();
       else document.addEventListener("DOMContentLoaded", start);
     })();
-    </script>
+    </script><script>document.documentElement.lang="ko";</script>
   navbar: []
   theme: light
 workflowSchedule:

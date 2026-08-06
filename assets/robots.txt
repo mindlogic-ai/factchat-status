@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mindlogic-ai.github.io/factchat-status/sitemap.xml
