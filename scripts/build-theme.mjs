@@ -14,7 +14,7 @@ const config = load(raw);
 const BASE = "https://mindlogic-ai.github.io/factchat-status";
 const TITLE = "FactChat 서비스 상태";
 const DESC =
-  "팩트챗(FactChat) 서비스의 실시간 가동 상태와 과거 장애 이력. 웹앱·Chat API·게이트웨이·전용 클라우드(NCP)의 30일 가동률을 확인할 수 있습니다.";
+  "팩트챗(FactChat) 서비스의 실시간 가동 상태와 과거 장애 이력. 서비스·홈페이지·API 게이트웨이·전용 클라우드(NCP)의 30일 가동률을 확인할 수 있습니다.";
 
 // SEO/미리보기 메타. Upptime 은 title 외에 메타태그를 만들지 않아 여기서 넣는다.
 // og:image 를 포함한 정적 파일은 assets/ 에 두면 사이트 루트로 복사된다
