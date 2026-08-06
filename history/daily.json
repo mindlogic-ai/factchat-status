@@ -1,14 +1,9 @@
 {
-  "generatedAt": "2026-08-05T23:36:43.479Z",
+  "generatedAt": "2026-08-06T00:48:03.595Z",
   "days": 30,
   "sites": {
     "chat-api-gateway": [
       {
-        "date": "2026-07-07",
-        "uptime": null,
-        "checks": 0
-      },
-      {
         "date": "2026-07-08",
         "uptime": null,
         "checks": 0
@@ -152,15 +147,15 @@
         "date": "2026-08-05",
         "uptime": 100,
         "checks": 2
+      },
+      {
+        "date": "2026-08-06",
+        "uptime": null,
+        "checks": 0
       }
     ],
     "docs": [
       {
-        "date": "2026-07-07",
-        "uptime": null,
-        "checks": 0
-      },
-      {
         "date": "2026-07-08",
         "uptime": null,
         "checks": 0
@@ -304,15 +299,15 @@
         "date": "2026-08-05",
         "uptime": 100,
         "checks": 3
+      },
+      {
+        "date": "2026-08-06",
+        "uptime": null,
+        "checks": 0
       }
     ],
     "landing-page": [
       {
-        "date": "2026-07-07",
-        "uptime": null,
-        "checks": 0
-      },
-      {
         "date": "2026-07-08",
         "uptime": null,
         "checks": 0
@@ -456,14 +451,14 @@
         "date": "2026-08-05",
         "uptime": 100,
         "checks": 3
+      },
+      {
+        "date": "2026-08-06",
+        "uptime": null,
+        "checks": 0
       }
     ],
     "ncp": [
-      {
-        "date": "2026-07-07",
-        "uptime": null,
-        "checks": 0
-      },
       {
         "date": "2026-07-08",
         "uptime": null,
@@ -608,14 +603,14 @@
         "date": "2026-08-05",
         "uptime": 100,
         "checks": 2
+      },
+      {
+        "date": "2026-08-06",
+        "uptime": null,
+        "checks": 0
       }
     ],
     "web-app": [
-      {
-        "date": "2026-07-07",
-        "uptime": null,
-        "checks": 0
-      },
       {
         "date": "2026-07-08",
         "uptime": null,
@@ -760,6 +755,11 @@
         "date": "2026-08-05",
         "uptime": 100,
         "checks": 3
+      },
+      {
+        "date": "2026-08-06",
+        "uptime": null,
+        "checks": 0
       }
     ]
   }
