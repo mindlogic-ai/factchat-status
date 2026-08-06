@@ -31,7 +31,7 @@
     // daily.json 이 아직 이 모니터를 모를 때(모니터 신규 추가·이름 변경으로 slug 가 바뀐 직후)
     // 그냥 return 하면 그 행만 막대가 통째로 사라진다. 회색 30칸으로 자리를 잡아둔다.
     var out = [];
-    for (var i = 0; i < 30; i++) out.push({ date: "", uptime: null, checks: 0 });
+    for (var i = 0; i < 30; i++) out.push({ date: "", uptime: null, seconds: 0 });
     return out;
   }
 
@@ -39,7 +39,7 @@
     if (!daily) return; // fetch 미완료 — 도착하면 schedule() 이 다시 부른다
     if (article.querySelector(".fc-bars")) return;
     var days = (daily.sites && daily.sites[slug]) || emptyWindow();
-    var withData = days.filter(function (d) { return d.checks > 0; });
+    var withData = days.filter(function (d) { return d.seconds > 0; });
     var avg = withData.length
       ? withData.reduce(function (s, d) { return s + d.uptime; }, 0) / withData.length
       : null;
@@ -49,8 +49,8 @@
     days.forEach(function (d) {
       var b = document.createElement("div");
       b.className = "fc-bar " + barClass(d);
-      b.title = d.checks
-        ? d.date + " · 가동률 " + d.uptime + "% (" + d.checks + "회 점검)"
+      b.title = d.seconds
+        ? d.date + " · 가동률 " + d.uptime + "% (관측 " + Math.round(d.seconds / 36) / 100 + "시간)"
         : (d.date ? d.date + " · 데이터 없음" : "데이터 없음");
       bars.appendChild(b);
     });
