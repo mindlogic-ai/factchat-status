@@ -1,8 +1,308 @@
 {
-  "generatedAt": "2026-08-08T12:28:59.255Z",
-  "days": 30,
+  "generatedAt": "2026-08-08T12:31:13.417Z",
+  "days": 90,
   "sites": {
     "chat-api-gateway": [
+      {
+        "date": "2026-05-11",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-12",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-13",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-14",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-15",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-16",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-17",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-18",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-19",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-20",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-21",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-22",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-23",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-24",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-25",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-26",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-27",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-28",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-29",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-30",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-31",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-01",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-02",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-03",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-04",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-05",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-06",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-07",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-08",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-09",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-10",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-11",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-12",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-13",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-14",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-15",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-16",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-17",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-18",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-19",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-20",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-21",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-22",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-23",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-24",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-25",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-26",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-27",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-28",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-29",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-30",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-01",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-02",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-03",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-04",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-05",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-06",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-07",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-08",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-09",
+        "uptime": null,
+        "seconds": 0
+      },
       {
         "date": "2026-07-10",
         "uptime": null,
@@ -151,10 +451,310 @@
       {
         "date": "2026-08-08",
         "uptime": 100,
-        "seconds": 44939
+        "seconds": 45073
       }
     ],
     "docs": [
+      {
+        "date": "2026-05-11",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-12",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-13",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-14",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-15",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-16",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-17",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-18",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-19",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-20",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-21",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-22",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-23",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-24",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-25",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-26",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-27",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-28",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-29",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-30",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-31",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-01",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-02",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-03",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-04",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-05",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-06",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-07",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-08",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-09",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-10",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-11",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-12",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-13",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-14",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-15",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-16",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-17",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-18",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-19",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-20",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-21",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-22",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-23",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-24",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-25",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-26",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-27",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-28",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-29",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-30",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-01",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-02",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-03",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-04",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-05",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-06",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-07",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-08",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-09",
+        "uptime": null,
+        "seconds": 0
+      },
       {
         "date": "2026-07-10",
         "uptime": null,
@@ -303,10 +903,310 @@
       {
         "date": "2026-08-08",
         "uptime": 100,
-        "seconds": 44939
+        "seconds": 45073
       }
     ],
     "landing-page": [
+      {
+        "date": "2026-05-11",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-12",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-13",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-14",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-15",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-16",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-17",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-18",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-19",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-20",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-21",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-22",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-23",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-24",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-25",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-26",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-27",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-28",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-29",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-30",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-31",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-01",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-02",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-03",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-04",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-05",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-06",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-07",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-08",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-09",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-10",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-11",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-12",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-13",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-14",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-15",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-16",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-17",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-18",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-19",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-20",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-21",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-22",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-23",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-24",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-25",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-26",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-27",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-28",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-29",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-30",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-01",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-02",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-03",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-04",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-05",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-06",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-07",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-08",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-09",
+        "uptime": null,
+        "seconds": 0
+      },
       {
         "date": "2026-07-10",
         "uptime": null,
@@ -455,10 +1355,310 @@
       {
         "date": "2026-08-08",
         "uptime": 100,
-        "seconds": 44939
+        "seconds": 45073
       }
     ],
     "ncp": [
+      {
+        "date": "2026-05-11",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-12",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-13",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-14",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-15",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-16",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-17",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-18",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-19",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-20",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-21",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-22",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-23",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-24",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-25",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-26",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-27",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-28",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-29",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-30",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-31",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-01",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-02",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-03",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-04",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-05",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-06",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-07",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-08",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-09",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-10",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-11",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-12",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-13",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-14",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-15",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-16",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-17",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-18",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-19",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-20",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-21",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-22",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-23",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-24",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-25",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-26",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-27",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-28",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-29",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-30",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-01",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-02",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-03",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-04",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-05",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-06",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-07",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-08",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-09",
+        "uptime": null,
+        "seconds": 0
+      },
       {
         "date": "2026-07-10",
         "uptime": null,
@@ -607,10 +1807,310 @@
       {
         "date": "2026-08-08",
         "uptime": 100,
-        "seconds": 44939
+        "seconds": 45073
       }
     ],
     "web-app": [
+      {
+        "date": "2026-05-11",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-12",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-13",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-14",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-15",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-16",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-17",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-18",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-19",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-20",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-21",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-22",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-23",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-24",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-25",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-26",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-27",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-28",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-29",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-30",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-05-31",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-01",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-02",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-03",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-04",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-05",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-06",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-07",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-08",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-09",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-10",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-11",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-12",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-13",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-14",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-15",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-16",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-17",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-18",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-19",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-20",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-21",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-22",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-23",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-24",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-25",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-26",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-27",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-28",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-29",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-06-30",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-01",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-02",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-03",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-04",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-05",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-06",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-07",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-08",
+        "uptime": null,
+        "seconds": 0
+      },
+      {
+        "date": "2026-07-09",
+        "uptime": null,
+        "seconds": 0
+      },
       {
         "date": "2026-07-10",
         "uptime": null,
@@ -759,7 +2259,7 @@
       {
         "date": "2026-08-08",
         "uptime": 100,
-        "seconds": 44939
+        "seconds": 45073
       }
     ]
   }

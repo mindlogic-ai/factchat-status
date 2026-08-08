@@ -1,5 +1,5 @@
 // history/<slug>.yml 의 커밋 이력에서 일자별 가동률을 계산해 history/daily.json 으로 쓴다.
-// Upptime 은 30일 막대에 쓸 데이터를 만들지 않는다.
+// Upptime 은 일자별 가동률 막대에 쓸 데이터를 만들지 않는다.
 //
 // 🚨 커밋은 "점검 1회"가 아니다. Upptime 의 5분 주기 `update` 는 상태가 *바뀔 때만* 커밋한다
 // (uptime-monitor src/update.ts: `if (shouldCommit || currentStatus !== status)`).
@@ -10,7 +10,7 @@ import { execSync } from "child_process";
 import { readFileSync, writeFileSync, readdirSync } from "fs";
 import { load } from "js-yaml";
 
-const DAYS = 30;
+const DAYS = 90; // 공개 status page 관례(Atlassian Statuspage 기본 90일)에 맞춘다
 const DAY_MS = 86400000;
 
 const slugs = readdirSync("history")
