@@ -1,6 +1,6 @@
 # FactChat public status page — https://mindlogic-ai.github.io/factchat-status/
 # Upptime config. Docs: https://upptime.js.org/docs/configuration
-# 모니터 이름은 바꿔도 slug 는 고정한다 — history/·api/ 경로와 30일 막대가 유지된다.
+# 모니터 이름은 바꿔도 slug 는 고정한다 — history/·api/ 경로와 가동률 막대가 유지된다.
 # 커스텀 도메인(status.factchat.bot) 보류 — *.factchat.bot 와일드카드가 Vercel 로 간다.
 owner: mindlogic-ai
 repo: factchat-status
@@ -27,7 +27,7 @@ status-website:
   introTitle: '**FactChat** 서비스 상태'
   introMessage: 팩트챗 서비스의 실시간 가동 상태와 과거 장애 이력입니다.
   customHeadHtml: |-
-    <meta name="description" content="팩트챗(FactChat) 서비스의 실시간 가동 상태와 과거 장애 이력. 서비스·홈페이지·API 게이트웨이·전용 클라우드(NCP)의 30일 가동률을 확인할 수 있습니다."><link rel="canonical" href="https://mindlogic-ai.github.io/factchat-status/"><meta property="og:type" content="website"><meta property="og:site_name" content="FactChat Status"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="FactChat 서비스 상태"><meta property="og:description" content="팩트챗(FactChat) 서비스의 실시간 가동 상태와 과거 장애 이력. 서비스·홈페이지·API 게이트웨이·전용 클라우드(NCP)의 30일 가동률을 확인할 수 있습니다."><meta property="og:url" content="https://mindlogic-ai.github.io/factchat-status/"><meta property="og:image" content="https://mindlogic-ai.github.io/factchat-status/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="FactChat 서비스 상태"><meta name="twitter:description" content="팩트챗(FactChat) 서비스의 실시간 가동 상태와 과거 장애 이력. 서비스·홈페이지·API 게이트웨이·전용 클라우드(NCP)의 30일 가동률을 확인할 수 있습니다."><meta name="twitter:image" content="https://mindlogic-ai.github.io/factchat-status/og.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"><style>/* FactChat Status — logician-ui 토큰 기반 테마.
+    <meta name="description" content="팩트챗(FactChat) 서비스의 실시간 가동 상태와 과거 장애 이력. 서비스·홈페이지·API 게이트웨이·전용 클라우드(NCP)의 90일 가동률을 확인할 수 있습니다."><link rel="canonical" href="https://mindlogic-ai.github.io/factchat-status/"><meta property="og:type" content="website"><meta property="og:site_name" content="FactChat Status"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="FactChat 서비스 상태"><meta property="og:description" content="팩트챗(FactChat) 서비스의 실시간 가동 상태와 과거 장애 이력. 서비스·홈페이지·API 게이트웨이·전용 클라우드(NCP)의 90일 가동률을 확인할 수 있습니다."><meta property="og:url" content="https://mindlogic-ai.github.io/factchat-status/"><meta property="og:image" content="https://mindlogic-ai.github.io/factchat-status/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="FactChat 서비스 상태"><meta name="twitter:description" content="팩트챗(FactChat) 서비스의 실시간 가동 상태와 과거 장애 이력. 서비스·홈페이지·API 게이트웨이·전용 클라우드(NCP)의 90일 가동률을 확인할 수 있습니다."><meta name="twitter:image" content="https://mindlogic-ai.github.io/factchat-status/og.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"><style>/* FactChat Status — logician-ui 토큰 기반 테마.
        customHeadHtml 은 Upptime 의 테마·global.css 보다 먼저 주입되므로 !important 가 필요하다.
        토큰 출처: mindlogic-ai/logician-ui src/theme/colors.ts */
     :root {
@@ -145,11 +145,11 @@ status-website:
     .fc-dot.degraded { background: var(--fc-warning); }
     .fc-dot.down { background: var(--fc-danger); }
 
-    /* 기간 선택 탭(24h/7d/30d/1y/all) 숨김 — 막대는 항상 30일 기준이라 혼동만 준다.
+    /* 기간 선택 탭(24h/7d/30d/1y/all) 숨김 — 막대는 항상 90일 기준이라 혼동만 준다.
        .changed 는 렌더 직후 500ms 만 붙었다 사라지므로 선택자에 쓰면 안 된다. */
     form.f.r { display: none !important; }
 
-    /* ── 30일 가동률 막대 ───────────────────────────────────────── */
+    /* ── 90일 가동률 막대 ───────────────────────────────────────── */
     .fc-bars { display: flex; gap: 2px; margin: 12px 0 8px; height: 34px; }
     .fc-bar { flex: 1 1 0; border-radius: 2px; background: var(--fc-border-subtle); transition: opacity .15s; }
     .fc-bar.up { background: var(--fc-success); opacity: .45; }
@@ -168,7 +168,7 @@ status-website:
       h1 { font-size: 26px !important; }
     }
     </style><script>/* FactChat Status — Upptime 이 제공하지 않는 두 가지를 채운다.
-       1) 컴포넌트별 30일 가동률 막대 (history/daily.json — daily-uptime.mjs 가 생성)
+       1) 컴포넌트별 가동률 막대 (history/daily.json — daily-uptime.mjs 가 생성, 창 길이는 days 필드)
        2) 모니터가 하나라도 정상이 아닐 때 상단 경고 배너
        Upptime 은 클라이언트에서 목록을 렌더하므로 DOM 이 준비될 때까지 폴링한다. */
     (function () {
@@ -200,7 +200,8 @@ status-website:
         // daily.json 이 아직 이 모니터를 모를 때(모니터 신규 추가·이름 변경으로 slug 가 바뀐 직후)
         // 그냥 return 하면 그 행만 막대가 통째로 사라진다. 회색 30칸으로 자리를 잡아둔다.
         var out = [];
-        for (var i = 0; i < 30; i++) out.push({ date: "", uptime: null, seconds: 0 });
+        var n = (daily && daily.days) || 90;
+        for (var i = 0; i < n; i++) out.push({ date: "", uptime: null, seconds: 0 });
         return out;
       }
 
@@ -227,7 +228,7 @@ status-website:
         var scale = document.createElement("div");
         scale.className = "fc-scale";
         scale.innerHTML =
-          "<span>30일 전</span><span class='fc-rule'></span><span>" +
+          "<span>" + (((daily && daily.days) || 90) + "일 전") + "</span><span class='fc-rule'></span><span>" +
           (avg === null ? "데이터 수집 중" : Math.round(avg * 100) / 100 + "% 가동") +
           "</span><span class='fc-rule'></span><span>오늘</span>";
 
