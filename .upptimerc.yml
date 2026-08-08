@@ -162,6 +162,19 @@ status-website:
     .fc-scale .fc-rule { flex: 1 1 auto; height: 1px; background: var(--fc-border-subtle); }
     .fc-legend-note { font-size: 12px; color: var(--fc-fg-subtle); margin-top: 4px; }
 
+    /* 막대 툴팁 — 브라우저 기본 title 은 1초 지연 + OS 스타일이라 90칸을 훑기에 느리다.
+       즉시 뜨는 커스텀 툴팁으로 대체한다(Statuspage 도 같은 방식). */
+    .fc-tip {
+      position: fixed; z-index: 50; pointer-events: none; opacity: 0;
+      transform: translate(-50%, -100%); transition: opacity .1s;
+      background: var(--fc-fg); color: #fff; border-radius: 8px;
+      padding: 8px 10px; font-size: 12px; line-height: 1.45; font-weight: 500;
+      white-space: nowrap; box-shadow: 0 4px 12px rgba(30, 36, 51, 0.18);
+    }
+    .fc-tip.on { opacity: 1; }
+    .fc-tip .fc-tip-date { font-weight: 600; margin-bottom: 2px; }
+    .fc-tip .fc-tip-sub { opacity: .75; }
+
     @media (max-width: 600px) {
       .fc-bars { height: 28px; gap: 1px; }
       h1 { font-size: 26px !important; }
@@ -218,6 +231,38 @@ status-website:
         return out;
       }
 
+      // ── 툴팁 ────────────────────────────────────────────────────
+      var tipEl = null;
+
+      function tipHtml(d) {
+        if (!d.seconds) return "<div class='fc-tip-date'>" + (d.date || "") + "</div><div class='fc-tip-sub'>데이터 없음</div>";
+        var downMinutes = (d.seconds * (1 - d.uptime / 100)) / 60;
+        var sub = downMinutes >= 1
+          ? "장애 " + Math.round(downMinutes) + "분 · 관측 " + Math.round(d.seconds / 36) / 100 + "시간"
+          : "관측 " + Math.round(d.seconds / 36) / 100 + "시간";
+        return "<div class='fc-tip-date'>" + d.date + " · 가동률 " + d.uptime + "%</div>" +
+          "<div class='fc-tip-sub'>" + sub + "</div>";
+      }
+
+      function showTip(bar) {
+        if (!tipEl) {
+          tipEl = document.createElement("div");
+          tipEl.className = "fc-tip";
+          document.body.appendChild(tipEl);
+        }
+        tipEl.innerHTML = bar.dataset.tip || "";
+        var r = bar.getBoundingClientRect();
+        // 화면 밖으로 나가지 않게 좌우를 물린다(90칸이라 양 끝 막대가 잘리기 쉽다)
+        var x = Math.min(window.innerWidth - 8, Math.max(8, r.left + r.width / 2));
+        tipEl.style.left = x + "px";
+        tipEl.style.top = r.top - 8 + "px";
+        tipEl.classList.add("on");
+      }
+
+      function hideTip() {
+        if (tipEl) tipEl.classList.remove("on");
+      }
+
       function renderBars(article, slug) {
         if (!daily) return; // fetch 미완료 — 도착하면 schedule() 이 다시 부른다
         if (article.querySelector(".fc-bars")) return;
@@ -234,12 +279,7 @@ status-website:
           b.className = "fc-bar";
           var color = barColor(d);
           if (color) b.style.background = color;
-          var downMinutes = d.seconds ? (d.seconds * (1 - d.uptime / 100)) / 60 : 0;
-          b.title = d.seconds
-            ? d.date + " · 가동률 " + d.uptime + "%" +
-              (downMinutes >= 1 ? " · 장애 " + Math.round(downMinutes) + "분" : "") +
-              " (관측 " + Math.round(d.seconds / 36) / 100 + "시간)"
-            : (d.date ? d.date + " · 데이터 없음" : "데이터 없음");
+          b.dataset.tip = tipHtml(d);
           bars.appendChild(b);
         });
 
@@ -249,6 +289,13 @@ status-website:
           "<span>" + (((daily && daily.days) || 90) + "일 전") + "</span><span class='fc-rule'></span><span>" +
           (avg === null ? "데이터 수집 중" : Math.round(avg * 100) / 100 + "% 가동") +
           "</span><span class='fc-rule'></span><span>오늘</span>";
+
+        bars.addEventListener("mouseover", function (e) {
+          if (e.target.classList && e.target.classList.contains("fc-bar")) showTip(e.target);
+        });
+        bars.addEventListener("mouseleave", hideTip);
+        // 스크롤하면 fixed 툴팁만 제자리에 남는다
+        window.addEventListener("scroll", hideTip, { passive: true });
 
         article.appendChild(bars);
         article.appendChild(scale);
