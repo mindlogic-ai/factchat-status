@@ -151,10 +151,9 @@ status-website:
 
     /* ── 90일 가동률 막대 ───────────────────────────────────────── */
     .fc-bars { display: flex; gap: 2px; margin: 12px 0 8px; height: 34px; }
-    .fc-bar { flex: 1 1 0; border-radius: 2px; background: var(--fc-border-subtle); transition: opacity .15s; }
-    .fc-bar.up { background: var(--fc-success); opacity: .45; }
-    .fc-bar.partial { background: var(--fc-warning); }
-    .fc-bar.down { background: var(--fc-danger); }
+    /* 색은 JS 가 인라인으로 넣는다(다운타임 기반 그라디언트). 여기 배경은 데이터 없는 날 전용. */
+    .fc-bar { flex: 1 1 0; border-radius: 2px; background: var(--fc-border-subtle);
+              opacity: .82; transition: opacity .15s; }
     .fc-bar:hover { opacity: 1; }
     .fc-scale {
       display: flex; align-items: center; gap: 10px;
@@ -162,6 +161,19 @@ status-website:
     }
     .fc-scale .fc-rule { flex: 1 1 auto; height: 1px; background: var(--fc-border-subtle); }
     .fc-legend-note { font-size: 12px; color: var(--fc-fg-subtle); margin-top: 4px; }
+
+    /* 막대 툴팁 — 브라우저 기본 title 은 1초 지연 + OS 스타일이라 90칸을 훑기에 느리다.
+       즉시 뜨는 커스텀 툴팁으로 대체한다(Statuspage 도 같은 방식). */
+    .fc-tip {
+      position: fixed; z-index: 50; pointer-events: none; opacity: 0;
+      transform: translate(-50%, -100%); transition: opacity .1s;
+      background: var(--fc-fg); color: #fff; border-radius: 8px;
+      padding: 8px 10px; font-size: 12px; line-height: 1.45; font-weight: 500;
+      white-space: nowrap; box-shadow: 0 4px 12px rgba(30, 36, 51, 0.18);
+    }
+    .fc-tip.on { opacity: 1; }
+    .fc-tip .fc-tip-date { font-weight: 600; margin-bottom: 2px; }
+    .fc-tip .fc-tip-sub { opacity: .75; }
 
     @media (max-width: 600px) {
       .fc-bars { height: 28px; gap: 1px; }
@@ -189,11 +201,25 @@ status-website:
         return m ? m[1] : null;
       }
 
-      function barClass(d) {
-        if (!d || d.uptime === null) return "";           // 데이터 없는 날은 회색으로 둔다
-        if (d.uptime >= 99.5) return "up";
-        if (d.uptime >= 90) return "partial";
-        return "down";
+      // 막대 색 — 3단계 구간이 아니라 그날 다운타임에 따른 연속 그라디언트.
+      // 🚨 가동률 %에 선형 보간하면 안 된다. 실제 하루는 거의 100% 아니면 98~99%대라
+      // 선형으로는 20분 장애가 초록의 98.6% 지점에 찍혀 사실상 안 보인다.
+      // 그래서 "다운된 분"에 로그 스케일로 보간한다 — 0분 초록, 20분쯤 호박색,
+      // 하루 종일(1440분) 빨강. 짧은 장애도 눈에 띄고 긴 장애와 구분도 된다.
+      var C_UP = [26, 166, 18], C_MID = [208, 161, 23], C_DOWN = [193, 35, 44]; // success/warning/danger
+      var LOG_FULL_DAY = Math.log(1441);
+
+      function mix(a, b, t) {
+        return a.map(function (v, i) { return Math.round(v + (b[i] - v) * t); });
+      }
+
+      function barColor(d) {
+        if (!d || d.uptime === null || !d.seconds) return null; // 관측 없는 날 → CSS 기본 회색
+        var downMinutes = (d.seconds * (1 - d.uptime / 100)) / 60;
+        if (downMinutes <= 0) return "rgb(" + C_UP.join(",") + ")";
+        var t = Math.min(1, Math.log(downMinutes + 1) / LOG_FULL_DAY);
+        var c = t <= 0.5 ? mix(C_UP, C_MID, t / 0.5) : mix(C_MID, C_DOWN, (t - 0.5) / 0.5);
+        return "rgb(" + c.join(",") + ")";
       }
 
       function emptyWindow() {
@@ -203,6 +229,38 @@ status-website:
         var n = (daily && daily.days) || 90;
         for (var i = 0; i < n; i++) out.push({ date: "", uptime: null, seconds: 0 });
         return out;
+      }
+
+      // ── 툴팁 ────────────────────────────────────────────────────
+      var tipEl = null;
+
+      function tipHtml(d) {
+        if (!d.seconds) return "<div class='fc-tip-date'>" + (d.date || "") + "</div><div class='fc-tip-sub'>데이터 없음</div>";
+        var downMinutes = (d.seconds * (1 - d.uptime / 100)) / 60;
+        var sub = downMinutes >= 1
+          ? "장애 " + Math.round(downMinutes) + "분 · 관측 " + Math.round(d.seconds / 36) / 100 + "시간"
+          : "관측 " + Math.round(d.seconds / 36) / 100 + "시간";
+        return "<div class='fc-tip-date'>" + d.date + " · 가동률 " + d.uptime + "%</div>" +
+          "<div class='fc-tip-sub'>" + sub + "</div>";
+      }
+
+      function showTip(bar) {
+        if (!tipEl) {
+          tipEl = document.createElement("div");
+          tipEl.className = "fc-tip";
+          document.body.appendChild(tipEl);
+        }
+        tipEl.innerHTML = bar.dataset.tip || "";
+        var r = bar.getBoundingClientRect();
+        // 화면 밖으로 나가지 않게 좌우를 물린다(90칸이라 양 끝 막대가 잘리기 쉽다)
+        var x = Math.min(window.innerWidth - 8, Math.max(8, r.left + r.width / 2));
+        tipEl.style.left = x + "px";
+        tipEl.style.top = r.top - 8 + "px";
+        tipEl.classList.add("on");
+      }
+
+      function hideTip() {
+        if (tipEl) tipEl.classList.remove("on");
       }
 
       function renderBars(article, slug) {
@@ -218,10 +276,10 @@ status-website:
         bars.className = "fc-bars";
         days.forEach(function (d) {
           var b = document.createElement("div");
-          b.className = "fc-bar " + barClass(d);
-          b.title = d.seconds
-            ? d.date + " · 가동률 " + d.uptime + "% (관측 " + Math.round(d.seconds / 36) / 100 + "시간)"
-            : (d.date ? d.date + " · 데이터 없음" : "데이터 없음");
+          b.className = "fc-bar";
+          var color = barColor(d);
+          if (color) b.style.background = color;
+          b.dataset.tip = tipHtml(d);
           bars.appendChild(b);
         });
 
@@ -231,6 +289,13 @@ status-website:
           "<span>" + (((daily && daily.days) || 90) + "일 전") + "</span><span class='fc-rule'></span><span>" +
           (avg === null ? "데이터 수집 중" : Math.round(avg * 100) / 100 + "% 가동") +
           "</span><span class='fc-rule'></span><span>오늘</span>";
+
+        bars.addEventListener("mouseover", function (e) {
+          if (e.target.classList && e.target.classList.contains("fc-bar")) showTip(e.target);
+        });
+        bars.addEventListener("mouseleave", hideTip);
+        // 스크롤하면 fixed 툴팁만 제자리에 남는다
+        window.addEventListener("scroll", hideTip, { passive: true });
 
         article.appendChild(bars);
         article.appendChild(scale);
