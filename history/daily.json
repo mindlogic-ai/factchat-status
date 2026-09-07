@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T18:30:31.546Z",
+  "generatedAt": "2026-09-07T19:22:19.499Z",
   "days": 90,
   "sites": {
     "chat-api-gateway": [
@@ -451,7 +451,7 @@
       {
         "date": "2026-09-07",
         "uptime": 100,
-        "seconds": 66632
+        "seconds": 69739
       }
     ],
     "docs": [
@@ -903,7 +903,7 @@
       {
         "date": "2026-09-07",
         "uptime": 100,
-        "seconds": 66632
+        "seconds": 69739
       }
     ],
     "landing-page": [
@@ -1355,7 +1355,7 @@
       {
         "date": "2026-09-07",
         "uptime": 100,
-        "seconds": 66632
+        "seconds": 69739
       }
     ],
     "ncp": [
@@ -1807,7 +1807,7 @@
       {
         "date": "2026-09-07",
         "uptime": 100,
-        "seconds": 66632
+        "seconds": 69739
       }
     ],
     "web-app": [
@@ -2259,7 +2259,7 @@
       {
         "date": "2026-09-07",
         "uptime": 100,
-        "seconds": 66632
+        "seconds": 69739
       }
     ]
   }
