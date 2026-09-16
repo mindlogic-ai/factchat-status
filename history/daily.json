@@ -1,13 +1,8 @@
 {
-  "generatedAt": "2026-09-15T23:24:15.788Z",
+  "generatedAt": "2026-09-16T01:00:43.822Z",
   "days": 90,
   "sites": {
     "chat-api-gateway": [
-      {
-        "date": "2026-06-18",
-        "uptime": null,
-        "seconds": 0
-      },
       {
         "date": "2026-06-19",
         "uptime": null,
@@ -451,15 +446,15 @@
       {
         "date": "2026-09-15",
         "uptime": 100,
-        "seconds": 84256
+        "seconds": 86400
+      },
+      {
+        "date": "2026-09-16",
+        "uptime": 100,
+        "seconds": 3644
       }
     ],
     "docs": [
-      {
-        "date": "2026-06-18",
-        "uptime": null,
-        "seconds": 0
-      },
       {
         "date": "2026-06-19",
         "uptime": null,
@@ -903,15 +898,15 @@
       {
         "date": "2026-09-15",
         "uptime": 100,
-        "seconds": 84256
+        "seconds": 86400
+      },
+      {
+        "date": "2026-09-16",
+        "uptime": 100,
+        "seconds": 3644
       }
     ],
     "landing-page": [
-      {
-        "date": "2026-06-18",
-        "uptime": null,
-        "seconds": 0
-      },
       {
         "date": "2026-06-19",
         "uptime": null,
@@ -1355,15 +1350,15 @@
       {
         "date": "2026-09-15",
         "uptime": 100,
-        "seconds": 84256
+        "seconds": 86400
+      },
+      {
+        "date": "2026-09-16",
+        "uptime": 100,
+        "seconds": 3644
       }
     ],
     "ncp": [
-      {
-        "date": "2026-06-18",
-        "uptime": null,
-        "seconds": 0
-      },
       {
         "date": "2026-06-19",
         "uptime": null,
@@ -1807,15 +1802,15 @@
       {
         "date": "2026-09-15",
         "uptime": 100,
-        "seconds": 84256
+        "seconds": 86400
+      },
+      {
+        "date": "2026-09-16",
+        "uptime": 100,
+        "seconds": 3644
       }
     ],
     "web-app": [
-      {
-        "date": "2026-06-18",
-        "uptime": null,
-        "seconds": 0
-      },
       {
         "date": "2026-06-19",
         "uptime": null,
@@ -2259,7 +2254,12 @@
       {
         "date": "2026-09-15",
         "uptime": 100,
-        "seconds": 84256
+        "seconds": 86400
+      },
+      {
+        "date": "2026-09-16",
+        "uptime": 100,
+        "seconds": 3644
       }
     ]
   }
