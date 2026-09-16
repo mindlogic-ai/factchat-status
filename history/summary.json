@@ -4,18 +4,20 @@
     "url": "https://mindlogic.factchat.bot/api/health",
     "icon": "https://icons.duckduckgo.com/ip3/mindlogic.factchat.bot.ico",
     "slug": "web-app",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 519,
-    "timeDay": 509,
-    "timeWeek": 492,
-    "timeMonth": 513,
-    "timeYear": 519,
-    "dailyMinutesDown": {}
+    "time": 518,
+    "timeDay": 415,
+    "timeWeek": 493,
+    "timeMonth": 514,
+    "timeYear": 518,
+    "dailyMinutesDown": {
+      "2026-09-16": 0
+    }
   },
   {
     "name": "FactChat Homepage (www.factchat.bot)",
@@ -28,11 +30,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 643,
-    "timeDay": 687,
-    "timeWeek": 599,
+    "time": 642,
+    "timeDay": 588,
+    "timeWeek": 595,
     "timeMonth": 643,
-    "timeYear": 643,
+    "timeYear": 642,
     "dailyMinutesDown": {}
   },
   {
@@ -46,11 +48,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 653,
-    "timeDay": 1003,
-    "timeWeek": 901,
-    "timeMonth": 716,
-    "timeYear": 653,
+    "time": 655,
+    "timeDay": 997,
+    "timeWeek": 902,
+    "timeMonth": 721,
+    "timeYear": 655,
     "dailyMinutesDown": {}
   },
   {
@@ -64,11 +66,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 702,
-    "timeDay": 730,
-    "timeWeek": 688,
+    "time": 701,
+    "timeDay": 733,
+    "timeWeek": 689,
     "timeMonth": 726,
-    "timeYear": 702,
+    "timeYear": 701,
     "dailyMinutesDown": {}
   },
   {
@@ -82,11 +84,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 1227,
-    "timeDay": 1225,
-    "timeWeek": 1247,
-    "timeMonth": 1237,
-    "timeYear": 1227,
+    "time": 1226,
+    "timeDay": 1197,
+    "timeWeek": 1246,
+    "timeMonth": 1236,
+    "timeYear": 1226,
     "dailyMinutesDown": {}
   }
 ]
