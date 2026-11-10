@@ -59,7 +59,7 @@
     scale.className = "fc-scale";
     scale.innerHTML =
       "<span>30일 전</span><span class='fc-rule'></span><span>" +
-      (avg === null ? "데이터 수집 중" : Math.round(avg * 100) / 100 + "% 가동") +
+      (avg === null ? "데이터 수집 중" : avg.toFixed(3) + "% 가동") +
       "</span><span class='fc-rule'></span><span>오늘</span>";
 
     article.appendChild(bars);
