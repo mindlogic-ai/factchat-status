@@ -5,9 +5,6 @@
 owner: mindlogic-ai
 repo: factchat-status
 sites:
-  - name: FactChat Service (app.factchat.bot)
-    slug: web-app
-    url: https://mindlogic.factchat.bot/api/health
   - name: FactChat Homepage (www.factchat.bot)
     slug: landing-page
     url: https://factchat.bot
@@ -17,9 +14,9 @@ sites:
   - name: API & API Gateway
     slug: chat-api-gateway
     url: https://factchat-cloud.mindlogic.ai/health/
-  - name: NCP (전용 클라우드)
+  - name: Baze (app.baze.co)
     slug: ncp
-    url: https://kbs.factchat.kr/api/health
+    url: https://app.baze.co/api/health
 status-website:
   baseUrl: /factchat-status
   logoUrl: https://www.factchat.bot/favicon.ico
@@ -27,7 +24,7 @@ status-website:
   introTitle: '**FactChat** 서비스 상태'
   introMessage: 팩트챗 서비스의 실시간 가동 상태와 과거 장애 이력입니다.
   customHeadHtml: |-
-    <meta name="description" content="팩트챗(FactChat) 서비스의 실시간 가동 상태와 과거 장애 이력. 서비스·홈페이지·API 게이트웨이·전용 클라우드(NCP)의 90일 가동률을 확인할 수 있습니다."><link rel="canonical" href="https://mindlogic-ai.github.io/factchat-status/"><meta property="og:type" content="website"><meta property="og:site_name" content="FactChat Status"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="FactChat 서비스 상태"><meta property="og:description" content="팩트챗(FactChat) 서비스의 실시간 가동 상태와 과거 장애 이력. 서비스·홈페이지·API 게이트웨이·전용 클라우드(NCP)의 90일 가동률을 확인할 수 있습니다."><meta property="og:url" content="https://mindlogic-ai.github.io/factchat-status/"><meta property="og:image" content="https://mindlogic-ai.github.io/factchat-status/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="FactChat 서비스 상태"><meta name="twitter:description" content="팩트챗(FactChat) 서비스의 실시간 가동 상태와 과거 장애 이력. 서비스·홈페이지·API 게이트웨이·전용 클라우드(NCP)의 90일 가동률을 확인할 수 있습니다."><meta name="twitter:image" content="https://mindlogic-ai.github.io/factchat-status/og.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"><style>/* FactChat Status — logician-ui 토큰 기반 테마.
+    <meta name="description" content="팩트챗(FactChat) 서비스의 실시간 가동 상태와 과거 장애 이력. Baze·홈페이지·API 게이트웨이의 90일 가동률을 확인할 수 있습니다."><link rel="canonical" href="https://mindlogic-ai.github.io/factchat-status/"><meta property="og:type" content="website"><meta property="og:site_name" content="FactChat Status"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="FactChat 서비스 상태"><meta property="og:description" content="팩트챗(FactChat) 서비스의 실시간 가동 상태와 과거 장애 이력. Baze·홈페이지·API 게이트웨이의 90일 가동률을 확인할 수 있습니다."><meta property="og:url" content="https://mindlogic-ai.github.io/factchat-status/"><meta property="og:image" content="https://mindlogic-ai.github.io/factchat-status/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="FactChat 서비스 상태"><meta name="twitter:description" content="팩트챗(FactChat) 서비스의 실시간 가동 상태와 과거 장애 이력. Baze·홈페이지·API 게이트웨이의 90일 가동률을 확인할 수 있습니다."><meta name="twitter:image" content="https://mindlogic-ai.github.io/factchat-status/og.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"><style>/* FactChat Status — logician-ui 토큰 기반 테마.
        customHeadHtml 은 Upptime 의 테마·global.css 보다 먼저 주입되므로 !important 가 필요하다.
        토큰 출처: mindlogic-ai/logician-ui src/theme/colors.ts */
     :root {
@@ -423,6 +420,7 @@ i18n:
 #   File Upload&OCR https://<docparse-alb>/health · KBS/SNU (NCP) https://<host>/api/health
 # 제외: SGI(sgi-factchat) — IP 화이트리스트라 GitHub 러너에서 접근 불가.
 # Gateway API 는 잠정 — 루트 200 은 의미가 약하다. 인증 없는 /health 로 교체 필요.
-# NCP 모니터는 kbs.factchat.kr 로 찌른다. factchat.kr 정점/www 는 Vercel(216.150.x)이고
-# NCP LB(sm-waf-lb-*.kr-gov.lb.naverncp.com)로 가는 건 테넌트 서브도메인뿐이다.
-# KBS·SNU 는 같은 클러스터·같은 LB 라 한 행으로 대표한다.
+# Baze 행(slug ncp)은 app.baze.co 로 찌른다. app.baze.co·kbs.factchat.kr·SNU 는 모두
+# 같은 NCP WAF LB(sm-waf-lb-*.kr-gov.lb.naverncp.com)라 한 행으로 대표하고, slug 를 ncp 로
+# 둬서 기존 NCP 가동률 이력을 그대로 잇는다. factchat.kr 정점/www 는 Vercel(216.150.x)이다.
+# 옛 web-app 행(mindlogic.factchat.bot)은 Vercel 배포가 일시정지돼 2026-09-16 부터 503 이라 뺐다.
