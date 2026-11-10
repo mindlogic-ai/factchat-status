@@ -5,6 +5,9 @@
 owner: mindlogic-ai
 repo: factchat-status
 sites:
+  - name: Baze (app.baze.co)
+    slug: ncp
+    url: https://app.baze.co/api/health
   - name: FactChat Homepage (www.factchat.bot)
     slug: landing-page
     url: https://factchat.bot
@@ -14,9 +17,6 @@ sites:
   - name: API & API Gateway
     slug: chat-api-gateway
     url: https://factchat-cloud.mindlogic.ai/health/
-  - name: Baze (app.baze.co)
-    slug: ncp
-    url: https://app.baze.co/api/health
 status-website:
   baseUrl: /factchat-status
   logoUrl: https://www.factchat.bot/favicon.ico
