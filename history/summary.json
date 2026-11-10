@@ -1,5 +1,25 @@
 [
   {
+    "name": "Baze (app.baze.co)",
+    "url": "https://app.baze.co/api/health",
+    "icon": "https://icons.duckduckgo.com/ip3/app.baze.co.ico",
+    "slug": "ncp",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "99.99%",
+    "uptimeYear": "100.00%",
+    "time": 1240,
+    "timeDay": 1120,
+    "timeWeek": 1180,
+    "timeMonth": 1190,
+    "timeYear": 1240,
+    "dailyMinutesDown": {
+      "2026-10-31": 3
+    }
+  },
+  {
     "name": "FactChat Homepage (www.factchat.bot)",
     "url": "https://factchat.bot",
     "icon": "https://icons.duckduckgo.com/ip3/factchat.bot.ico",
@@ -52,25 +72,5 @@
     "timeMonth": 700,
     "timeYear": 696,
     "dailyMinutesDown": {}
-  },
-  {
-    "name": "Baze (app.baze.co)",
-    "url": "https://app.baze.co/api/health",
-    "icon": "https://icons.duckduckgo.com/ip3/app.baze.co.ico",
-    "slug": "ncp",
-    "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "99.99%",
-    "uptimeYear": "100.00%",
-    "time": 1240,
-    "timeDay": 1120,
-    "timeWeek": 1180,
-    "timeMonth": 1190,
-    "timeYear": 1240,
-    "dailyMinutesDown": {
-      "2026-10-31": 3
-    }
   }
 ]
