@@ -7,7 +7,7 @@ repo: factchat-status
 sites:
   - name: FactChat Service (app.factchat.bot)
     slug: web-app
-    url: https://mindlogic.factchat.bot/api/health
+    url: https://app.baze.co/api/health
   - name: FactChat Homepage (www.factchat.bot)
     slug: landing-page
     url: https://factchat.bot
